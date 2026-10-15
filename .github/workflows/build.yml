@@ -1,0 +1,39 @@
+name: Build
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Compile both files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Install Tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          echo "$PWD" >> "$GITHUB_PATH"
+
+      - name: Compile the CV and the cover letter
+        run: |
+          tectonic --chatter minimal cv.tex
+          tectonic --chatter minimal cover-letter.tex
+
+      - name: Check the cover letter is one page
+        run: |
+          sudo apt-get install -y poppler-utils > /dev/null
+          pages=$(pdfinfo cover-letter.pdf | awk '/^Pages/ {print $2}')
+          echo "cover letter pages: $pages"
+          test "$pages" -eq 1

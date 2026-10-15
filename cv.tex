@@ -1,0 +1,102 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,left=1.3cm,right=1.3cm,top=1.0cm,bottom=1.0cm]{geometry}
+\usepackage{fontspec}
+% ligatures turn "ff" and "fi" into single glyphs that text extraction (and applicant tracking systems) reads as
+% broken words, such as "o icers", so they are off; hyphenation is off too so no word is split across lines
+\setmainfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic,Ligatures={NoCommon,NoRequired,NoContextual}]
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\usepackage{fontawesome5}
+\usepackage{accsupp}
+% icons carry empty ActualText so text extraction (and applicant tracking systems) skips them
+\newcommand{\icon}[1]{\BeginAccSupp{method=plain,ActualText={}}#1\EndAccSupp{}}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage[normalem]{ulem}
+% a shallow underline so link underlines never touch the line below
+\renewcommand{\ULdepth}{1.4pt}
+\usepackage{xcolor}
+\definecolor{link}{HTML}{1F3A93}
+\definecolor{ph}{HTML}{FFE58A}
+% cover letter placeholders: bold, in square brackets and on a highlight, so they are found without relying on colour
+\newcommand{\ph}[1]{{\setlength{\fboxsep}{1pt}\colorbox{ph}{\strut\textbf{#1}}}}
+\usepackage[colorlinks=true,urlcolor=link,linkcolor=link,pdfauthor={Your Name},pdfcreator={Your Name},pdftitle={Your Name CV},pdflang={en-GB}]{hyperref}
+\pagestyle{empty}
+\raggedright
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\vspace{-5pt}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\setlist[itemize]{leftmargin=1.1em,label=\textbullet,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,before=\small,after=\vspace{3pt}}
+\begin{document}
+\begin{minipage}[c]{0.43\textwidth}{\fontsize{23}{26}\selectfont\bfseries\scshape Your Name}\end{minipage}%
+\hfill\begin{minipage}[c]{0.27\textwidth}\small \icon{\raisebox{-0.1\height}{\faMapMarker*}}\ City, Country \\[1pt]
+\href{mailto:you@example.com}{\icon{\raisebox{-0.1\height}{\faEnvelope}}\ \uline{you@example.com}} \\[1pt]
+\href{tel:+447000000000}{\icon{\raisebox{-0.1\height}{\faPhone}}\ \uline{+44 7000 000000}}\end{minipage}%
+\hfill\begin{minipage}[c]{0.27\textwidth}\small \href{https://example.com}{\icon{\raisebox{-0.1\height}{\faGlobe}}\ \uline{yourwebsite.com}} \\[1pt]
+\href{https://www.linkedin.com/}{\icon{\raisebox{-0.1\height}{\faLinkedin}}\ \uline{linkedin.com/in/yourname}} \\[1pt]
+\href{https://github.com/}{\icon{\raisebox{-0.1\height}{\faGithub}}\ \uline{github.com/yourname}}\end{minipage}
+\vspace{-2pt}
+\section{Education}
+\needspace{3\baselineskip}\textbf{University Name, City}\hfill{\small Expected Month Year}\par
+{\small\textit{Degree (Hons) Subject Name}}\hfill{\small\textit{}}\par
+{\small\textbf{Average so far}: \textbf{00\%}}\par
+{\small\textbf{Relevant modules}: Module One (\textbf{00\%}), Module Two (\textbf{00\%}), Module Three, Module Four, Module Five}\par\vspace{2pt}
+\needspace{3\baselineskip}\textbf{School or College Name, City}\hfill{\small Month Year - Month Year}\par
+{\small\textit{Qualification: Subject One (\textbf{A}), Subject Two (\textbf{A}), Subject Three (\textbf{B})}}\hfill{\small\textit{}}\par\vspace{2pt}
+\section{Technical Skills}
+{\small
+\textbf{Languages}: Language one, language two, language three \\
+\textbf{Tools}: Tool one, tool two, tool three, tool four \\
+\textbf{Other skills}: Skill one, skill two, skill three
+}
+\section{Projects}
+\needspace{3\baselineskip}\textbf{Project Name: What It Does}\hfill{\small \href{https://example.com}{\uline{Website}\,\icon{\raisebox{0.05\height}{\scriptsize\faExternalLink*}}} $\vert$ \href{https://example.com}{\uline{Write-up}\,\icon{\raisebox{0.05\height}{\scriptsize\faExternalLink*}}} $\vert$ \href{https://github.com/}{\uline{GitHub}\,\icon{\raisebox{0.05\height}{\scriptsize\faExternalLink*}}}}\par
+{\small\textit{Main tools and languages used}}\hfill{\small\textit{Year - Present}}\par
+\begin{itemize}
+  \item What you built and why, in one line that starts with a strong verb
+  \item A result someone can check, with a \textbf{number} where possible, such as time saved or users reached
+\end{itemize}
+\needspace{3\baselineskip}\textbf{Project Name: What It Does}\hfill{\small \href{https://example.com}{\uline{Write-up}\,\icon{\raisebox{0.05\height}{\scriptsize\faExternalLink*}}} $\vert$ \href{https://github.com/}{\uline{GitHub}\,\icon{\raisebox{0.05\height}{\scriptsize\faExternalLink*}}}}\par
+{\small\textit{Main tools and languages used}}\hfill{\small\textit{Year}}\par
+\begin{itemize}
+  \item Your part in the work, written as what you did rather than what the team did
+  \item The outcome, with a \textbf{number} where possible
+\end{itemize}
+\needspace{3\baselineskip}\textbf{Project Name (team of four)}\hfill{\small \href{https://example.com}{\uline{Write-up}\,\icon{\raisebox{0.05\height}{\scriptsize\faExternalLink*}}}}\par
+{\small\textit{Main tools and languages used}}\hfill{\small\textit{Year}}\par
+\begin{itemize}
+  \item Mention the team size in a bullet or the title, then the part you owned
+\end{itemize}
+\section{Experience}
+\needspace{3\baselineskip}\textbf{Job Title}\hfill{\small\textbf{\textit{Organisation Name, City}}}\par
+{\small\textit{Three skills this role used}}\hfill{\small\textit{Month Year - Present}}\par
+\begin{itemize}
+  \item Your main responsibility, starting with a verb
+  \item Something you improved or were trusted with
+\end{itemize}
+\needspace{3\baselineskip}\textbf{Job Title (part-time)}\hfill{\small\textbf{\textit{Organisation Name, City}}}\par
+{\small\textit{Three skills this role used}}\hfill{\small\textit{Month Year - Month Year}}\par
+\begin{itemize}
+  \item Your main responsibility, starting with a verb
+\end{itemize}
+\section{Research and Publications}
+\needspace{3\baselineskip}\textbf{Publication or Report Title}\hfill{\small \href{https://doi.org/}{\uline{DOI}\,\icon{\raisebox{0.05\height}{\scriptsize\faExternalLink*}}} $\vert$ \href{https://example.com}{\uline{Write-up}\,\icon{\raisebox{0.05\height}{\scriptsize\faExternalLink*}}}}\par
+{\small\textit{Full title. Your Initial. Surname, Publisher or Repository, Year}}\hfill{\small\textit{}}\par
+\begin{itemize}
+  \item One line on what it covers. Remove this section if you have nothing to list
+\end{itemize}
+\section{Volunteering}
+\needspace{3\baselineskip}\textbf{Volunteer Role}\hfill{\small Month Year - Present}\par
+{\small\textit{Organisation Name}}\hfill{\small\textit{}}\par
+\begin{itemize}
+  \item What you do and who it helps
+\end{itemize}
+\section{Achievements}
+\begin{itemize}
+  \item \textbf{Award or achievement}, organisation and year
+  \item \textbf{Another highlight}, with a link if there is one to show: \href{https://example.com}{\uline{Link}}
+\end{itemize}
+\section{Spoken Languages}
+{\small Language (fluent), Language (conversational)}
+\end{document}

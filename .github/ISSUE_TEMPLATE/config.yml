@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://isaacadjei.me/contact
+    about: Questions that are not a bug or an idea for the files
+  - name: Report a security concern privately
+    url: https://github.com/zaccesss/latex-cv/blob/main/SECURITY.md
+    about: Read the security policy before reporting
