@@ -1,0 +1,31 @@
+name: Compile or layout problem
+description: The files do not compile or the layout breaks
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Describe the problem. Never paste a real CV with personal details.
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: How you compiled it
+      options:
+        - Overleaf with XeLaTeX
+        - Overleaf with LuaLaTeX
+        - Tectonic
+        - latexmk with XeLaTeX
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message or screenshot
+      description: Paste the first error from the log.
+    validations:
+      required: false

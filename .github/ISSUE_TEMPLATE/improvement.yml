@@ -1,0 +1,19 @@
+name: Improvement idea
+description: Suggest a change to the layout, the docs or how parsers read the PDF
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What would you change and why?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: An example
+      description: A sketch, a link or a few lines of LaTeX, if you have one.
+    validations:
+      required: false

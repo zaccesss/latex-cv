@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,left=1.3cm,right=1.3cm,top=1.0cm,bottom=1.0cm]{geometry}
+\usepackage{fontspec}
+% ligatures turn "ff" and "fi" into single glyphs that text extraction (and applicant tracking systems) reads as
+% broken words, such as "o icers", so they are off; hyphenation is off too so no word is split across lines
+\setmainfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic,Ligatures={NoCommon,NoRequired,NoContextual}]
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\usepackage{fontawesome5}
+\usepackage{accsupp}
+% icons carry empty ActualText so text extraction (and applicant tracking systems) skips them
+\newcommand{\icon}[1]{\BeginAccSupp{method=plain,ActualText={}}#1\EndAccSupp{}}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage[normalem]{ulem}
+% a shallow underline so link underlines never touch the line below
+\renewcommand{\ULdepth}{1.4pt}
+\usepackage{xcolor}
+\definecolor{link}{HTML}{1F3A93}
+\definecolor{ph}{HTML}{FFE58A}
+% cover letter placeholders: bold, in square brackets and on a highlight, so they are found without relying on colour
+\newcommand{\ph}[1]{{\setlength{\fboxsep}{1pt}\colorbox{ph}{\strut\textbf{#1}}}}
+\usepackage[colorlinks=true,urlcolor=link,linkcolor=link,pdfauthor={Your Name},pdfcreator={Your Name},pdftitle={Your Name Cover Letter},pdflang={en-GB}]{hyperref}
+\pagestyle{empty}
+\raggedright
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\vspace{-5pt}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\setlist[itemize]{leftmargin=1.1em,label=\textbullet,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,before=\small,after=\vspace{3pt}}
+\begin{document}
+\begin{minipage}[c]{0.43\textwidth}{\fontsize{23}{26}\selectfont\bfseries\scshape Your Name}\end{minipage}%
+\hfill\begin{minipage}[c]{0.27\textwidth}\small \icon{\raisebox{-0.1\height}{\faMapMarker*}}\ City, Country \\[1pt]
+\href{mailto:you@example.com}{\icon{\raisebox{-0.1\height}{\faEnvelope}}\ \uline{you@example.com}} \\[1pt]
+\href{tel:+447000000000}{\icon{\raisebox{-0.1\height}{\faPhone}}\ \uline{+44 7000 000000}}\end{minipage}%
+\hfill\begin{minipage}[c]{0.27\textwidth}\small \href{https://example.com}{\icon{\raisebox{-0.1\height}{\faGlobe}}\ \uline{yourwebsite.com}} \\[1pt]
+\href{https://www.linkedin.com/}{\icon{\raisebox{-0.1\height}{\faLinkedin}}\ \uline{linkedin.com/in/yourname}} \\[1pt]
+\href{https://github.com/}{\icon{\raisebox{-0.1\height}{\faGithub}}\ \uline{github.com/yourname}}\end{minipage}
+\vspace{-2pt}
+\vspace{14pt}
+{\fontsize{10.5}{14}\selectfont
+\ph{[Date]}\par\vspace{8pt}
+\ph{[Hiring manager's name or Hiring Team]}\\
+\ph{[Company]}\\
+\ph{[Town or city]}\par\vspace{9pt}
+\textbf{Application for \ph{[Role title]} \ph{[Reference number]}}\par\vspace{8pt}
+Dear \ph{[Mr or Ms Surname / Hiring Team]},\par\vspace{5pt}
+\ph{[One line on the work you enjoy most]}, which is why the \ph{[Role title]} role at \ph{[Company]} stood out to me. I study \ph{[Course]} at \ph{[University]}, with an average of \textbf{[your average]} so far. \ph{[Why this company, e.g. a product you admire]} is where I want to grow.\par\vspace{6pt}
+Lead with your strongest project for this role, written as what you did: I built \ph{[Project]}, a \ph{[one-line description]}, using \ph{[tools the advert asks for]}. Give one or two results someone can check, such as \ph{[a result, e.g. 30\% faster]}, and link them to what the role needs.\par\vspace{6pt}
+Then summarise two or three other relevant projects in a sentence each, with a link to each one, and name the modules that back them up: \ph{[Module one]}; \ph{[Module two]}; \ph{[Module three]}.\par\vspace{6pt}
+Show how you work: \ph{[a role with responsibility]} taught me to \ph{[a skill the team values]}, and \ph{[another role]} taught me to \ph{[another skill]}.\par\vspace{6pt}
+I would welcome the chance to bring this experience to \ph{[Company]} and to learn from your \ph{[team, e.g. engineering]} team. Thank you for considering my application; I would be glad to discuss it further. My work is at \href{https://example.com}{\uline{yourwebsite.com}}.\par\vspace{8pt}
+\ph{[Yours sincerely / Yours faithfully]}\par\vspace{4pt}
+Your Name\par}
+\end{document}
