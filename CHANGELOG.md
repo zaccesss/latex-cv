@@ -9,6 +9,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- A step-by-step guide in `guides/using-it.md`, linked from the README and the support page
+
 ### Changed
 
 - The header and link icons are black, so only the link text carries the link colour
