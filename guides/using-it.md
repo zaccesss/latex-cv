@@ -21,6 +21,13 @@ version.
 - **Tectonic:** install it, then run `tectonic cv/cv.tex`. The PDF appears next to the source.
 - **TeX Live or MacTeX:** run `latexmk -xelatex cv.tex` inside the `cv` folder.
 
+### In Word
+
+Open [`cv/cv.docx`](../cv/cv.docx) or [`cover-letter/cover-letter.docx`](../cover-letter/cover-letter.docx) in
+Word, Pages or Google Docs and replace the example text. The layout is simpler than the PDF, but the sections and
+the order are the same, so the steps below still apply. Set your name in **File** then **Properties**. Save
+as PDF unless the employer asks for Word.
+
 ## 2. Fill in the header
 
 Near the top of the document is the name, then two short columns of contact details. Replace the name and each

@@ -11,6 +11,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- Word versions of the CV and the cover letter, `cv/cv.docx` and `cover-letter/cover-letter.docx`
 - A step-by-step guide in `guides/using-it.md`, linked from the README and the support page
 
 ### Changed
