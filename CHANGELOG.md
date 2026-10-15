@@ -11,6 +11,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- The header and link icons are black, so only the link text carries the link colour
 - The CV and the cover letter each live in their own folder, `cv/` and `cover-letter/`, with their compiled PDFs
 
 ### Fixed
