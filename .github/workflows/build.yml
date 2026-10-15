@@ -28,13 +28,13 @@ jobs:
 
       - name: Compile the CV and the cover letter
         run: |
-          tectonic --chatter minimal cv.tex
-          tectonic --chatter minimal cover-letter.tex
+          tectonic --chatter minimal cv/cv.tex
+          tectonic --chatter minimal cover-letter/cover-letter.tex
 
       - name: Check the cover letter is one page
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils > /dev/null
-          pages=$(pdfinfo cover-letter.pdf | awk '/^Pages/ {print $2}')
+          pages=$(pdfinfo cover-letter/cover-letter.pdf | awk '/^Pages/ {print $2}')
           echo "cover letter pages: $pages"
           test "$pages" -eq 1

@@ -11,8 +11,8 @@ Improvements to the layout, the build instructions or how well parsers read the 
 ## Making a change
 
 1. Fork the repository and create a branch.
-2. Edit `cv.tex` or `cover-letter.tex`.
-3. Compile with `tectonic cv.tex` (or `latexmk -xelatex`) and check the result by copying the PDF text into a plain text editor.
+2. Edit `cv/cv.tex` or `cover-letter/cover-letter.tex`.
+3. Compile with `tectonic cv/cv.tex` (or `latexmk -xelatex` inside the folder) and check the result by copying the PDF text into a plain text editor.
 4. Regenerate the compiled PDFs and the preview images in `images/` if the layout changed.
 5. Open a pull request that explains what changed and why.
 

@@ -11,9 +11,10 @@ Open the `.tex` files, replace the example text with your own and compile.
 
 | File | What it is |
 | --- | --- |
-| [`cv.tex`](cv.tex) | The CV: education, skills, projects, experience, publications, volunteering, achievements and languages |
-| [`cover-letter.tex`](cover-letter.tex) | A one-page letter with the same header and highlighted placeholders to fill in |
-| [`cv.pdf`](cv.pdf), [`cover-letter.pdf`](cover-letter.pdf) | The compiled examples |
+| [`cv/cv.tex`](cv/cv.tex) | The CV: education, skills, projects, experience, publications, volunteering, achievements and languages |
+| [`cover-letter/cover-letter.tex`](cover-letter/cover-letter.tex) | A one-page letter with the same header and highlighted placeholders to fill in |
+| [`cv/cv.pdf`](cv/cv.pdf), [`cover-letter/cover-letter.pdf`](cover-letter/cover-letter.pdf) | The compiled examples |
+| [`images/`](images) | The preview images shown above |
 
 ## Build it
 
@@ -21,8 +22,8 @@ Both files need **XeLaTeX** (or LuaLaTeX), because they load fonts through `font
 ships with TeX Live, so nothing extra has to be installed.
 
 - **Overleaf:** upload the `.tex` file, then open Menu, set Compiler to XeLaTeX and recompile.
-- **Tectonic:** `tectonic cv.tex` downloads what it needs on the first run.
-- **TeX Live or MacTeX:** `latexmk -xelatex cv.tex`
+- **Tectonic:** `tectonic cv/cv.tex` downloads what it needs on the first run and writes the PDF beside the source.
+- **TeX Live or MacTeX:** `cd cv && latexmk -xelatex cv.tex`
 
 > [!IMPORTANT]
 > pdfLaTeX will not compile these files. If Overleaf shows a `fontspec` error, the compiler is still set to pdfLaTeX.
