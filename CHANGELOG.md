@@ -9,6 +9,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Fixed
+
+- The build refreshes the package list before installing poppler, so the page check no longer fails on a stale mirror
+
 ## [1.0.0] - 2026-10-15
 
 ### Added
