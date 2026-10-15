@@ -33,7 +33,8 @@ jobs:
 
       - name: Check the cover letter is one page
         run: |
-          sudo apt-get install -y poppler-utils > /dev/null
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils > /dev/null
           pages=$(pdfinfo cover-letter.pdf | awk '/^Pages/ {print $2}')
           echo "cover letter pages: $pages"
           test "$pages" -eq 1
