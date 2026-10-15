@@ -9,6 +9,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- The CV and the cover letter each live in their own folder, `cv/` and `cover-letter/`, with their compiled PDFs
+
 ### Fixed
 
 - The build refreshes the package list before installing poppler, so the page check no longer fails on a stale mirror
