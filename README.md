@@ -15,6 +15,7 @@ walks through every part.
 | [`cv/cv.tex`](cv/cv.tex) | The CV: education, skills, projects, experience, publications, volunteering, achievements and languages |
 | [`cover-letter/cover-letter.tex`](cover-letter/cover-letter.tex) | A one-page letter with the same header and highlighted placeholders to fill in |
 | [`cv/cv.pdf`](cv/cv.pdf), [`cover-letter/cover-letter.pdf`](cover-letter/cover-letter.pdf) | The compiled examples |
+| [`cv/cv.docx`](cv/cv.docx), [`cover-letter/cover-letter.docx`](cover-letter/cover-letter.docx) | Word versions of the same example text, for anyone not using LaTeX |
 | [`images/`](images) | The preview images shown above |
 | [`guides/using-it.md`](guides/using-it.md) | A step-by-step guide from opening the files to sending the PDF |
 
@@ -29,6 +30,10 @@ ships with TeX Live, so nothing extra has to be installed.
 
 > [!IMPORTANT]
 > pdfLaTeX will not compile these files. If Overleaf shows a `fontspec` error, the compiler is still set to pdfLaTeX.
+
+> [!NOTE]
+> The Word files are a simpler copy for when an employer asks for Word or LaTeX is not to hand. The `.tex` files
+> are the main version and changes are made there first.
 
 ## Fill it in
 
