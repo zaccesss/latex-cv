@@ -4,6 +4,7 @@ Need help or have a question?
 
 - **It will not compile:** check the compiler is XeLaTeX or LuaLaTeX first, as the [README](README.md#build-it) explains, then open an issue with the error message.
 - **Ideas and improvements:** open an issue.
+- **How to use it:** the [step-by-step guide](guides/using-it.md).
 - **More about the files:** [README.md](README.md).
 
 > [!TIP]

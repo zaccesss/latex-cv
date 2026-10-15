@@ -1,7 +1,8 @@
 # latex-cv
 
 A clean LaTeX CV and a one-page cover letter in a matching style, written so applicant tracking systems read every word.
-Open the `.tex` files, replace the example text with your own and compile.
+Open the `.tex` files, replace the example text with your own and compile. The [step-by-step guide](guides/using-it.md)
+walks through every part.
 
 | CV | Cover letter |
 | --- | --- |
@@ -15,6 +16,7 @@ Open the `.tex` files, replace the example text with your own and compile.
 | [`cover-letter/cover-letter.tex`](cover-letter/cover-letter.tex) | A one-page letter with the same header and highlighted placeholders to fill in |
 | [`cv/cv.pdf`](cv/cv.pdf), [`cover-letter/cover-letter.pdf`](cover-letter/cover-letter.pdf) | The compiled examples |
 | [`images/`](images) | The preview images shown above |
+| [`guides/using-it.md`](guides/using-it.md) | A step-by-step guide from opening the files to sending the PDF |
 
 ## Build it
 
