@@ -12,7 +12,7 @@ walks through every part.
 
 | File | What it is |
 | --- | --- |
-| [`cv/cv.tex`](cv/cv.tex) | The CV: education, skills, projects, publications, experience, leadership and volunteering, achievements and languages |
+| [`cv/cv.tex`](cv/cv.tex) | The CV: profile, education, skills, projects, experience, leadership and volunteering, publications, achievements and languages |
 | [`cover-letter/cover-letter.tex`](cover-letter/cover-letter.tex) | A one-page letter with the same header and highlighted placeholders to fill in |
 | [`cv/cv.pdf`](cv/cv.pdf), [`cover-letter/cover-letter.pdf`](cover-letter/cover-letter.pdf) | The compiled examples |
 | [`cv/cv.docx`](cv/cv.docx), [`cover-letter/cover-letter.docx`](cover-letter/cover-letter.docx) | Word versions of the same example text, for anyone not using LaTeX |

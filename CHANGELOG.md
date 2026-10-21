@@ -16,7 +16,9 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Research and Publications sits straight after Projects, so technical work reads together before experience
+- A one-line Profile opens the CV, saying what drives the work and the role or placement wanted
+- Sections run Projects, Experience, Leadership and Volunteering, then Research and Publications
+- The skills list ends with a Professional row for ways of working. The example CV keeps one job entry so it stays on one page
 - Every date sits on the second line of its entry in italics, so education, experience and leadership dates line up the same way
 - Project dates show the year only
 - The Volunteering section is now Leadership and Volunteering, so it also holds society and representative roles
