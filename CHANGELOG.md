@@ -9,6 +9,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-10-22
+
 ### Added
 
 - Word versions of the CV and the cover letter, `cv/cv.docx` and `cover-letter/cover-letter.docx`
