@@ -16,7 +16,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Spoken Languages becomes Additional Information with Languages, Certifications and Interests rows
+- Spoken Languages becomes Additional Information with Spoken languages, Certifications and Interests rows; the skills row is Programming languages
 - Every entry in Leadership and Volunteering has a skills line under its title, as in Experience
 - The research entry keeps the publisher and date on the right
 - A one-line Profile opens the CV, saying what drives the work and the role or placement wanted
