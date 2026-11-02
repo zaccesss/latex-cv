@@ -6,3 +6,6 @@ contact_links:
   - name: Report a security concern privately
     url: https://github.com/zaccesss/latex-cv/blob/main/SECURITY.md
     about: Read the security policy before reporting
+  - name: AI policy
+    url: https://github.com/zaccesss/ai-policy
+    about: How AI may and may not be used in issues and pull requests here.

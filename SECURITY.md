@@ -15,7 +15,7 @@ This repository holds two LaTeX source files and their compiled PDFs. It runs no
 ## Reporting a concern
 
 > [!IMPORTANT]
-> Report privately, not in a public issue. Email [contact@isaacadjei.me](mailto:contact@isaacadjei.me) with details. Expect an acknowledgement within a few days.
+> Report privately, not in a public issue. Email [security@isaacadjei.me](mailto:security@isaacadjei.me) with details. Expect an acknowledgement within a few days.
 
 ## The shared policy
 
