@@ -9,9 +9,16 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-11-03
+
+### Added
+
+- A badge row and a diagram of the build from the `.tex` files to a PDF a recruitment system can read.
+
 ### Changed
 
 - Community files follow the [AI policy](https://github.com/zaccesss/ai-policy): pull requests declare AI use and issue forms ask whether AI helped. Security reports go to security@isaacadjei.me.
+- Routine tidy-up.
 
 ## [1.1.0] - 2026-10-22
 

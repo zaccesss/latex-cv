@@ -1,5 +1,10 @@
 # latex-cv
 
+[![Build](https://github.com/zaccesss/latex-cv/actions/workflows/build.yml/badge.svg)](https://github.com/zaccesss/latex-cv/actions/workflows/build.yml)
+[![Markdown Lint](https://github.com/zaccesss/latex-cv/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccesss/latex-cv/actions/workflows/markdownlint.yml)
+[![Release](https://img.shields.io/github/v/release/zaccesss/latex-cv?label=release)](https://github.com/zaccesss/latex-cv/releases/latest)
+[![Licence: MIT](https://img.shields.io/badge/licence-MIT-green.svg)](LICENSE)
+
 A clean LaTeX CV and a one-page cover letter in a matching style, written so applicant tracking systems read every word.
 Open the `.tex` files, replace the example text with your own and compile. The [step-by-step guide](guides/using-it.md)
 walks through every part.
@@ -27,6 +32,15 @@ ships with TeX Live, so nothing extra has to be installed.
 - **Overleaf:** upload the `.tex` file, then open Menu, set Compiler to XeLaTeX and recompile.
 - **Tectonic:** `tectonic cv/cv.tex` downloads what it needs on the first run and writes the PDF beside the source.
 - **TeX Live or MacTeX:** `cd cv && latexmk -xelatex cv.tex`
+
+```mermaid
+flowchart LR
+    TEX["cv/cv.tex<br/>cover-letter/cover-letter.tex"] --> ENGINE["XeLaTeX or LuaLaTeX<br/>Overleaf, Tectonic or latexmk"]
+    ENGINE -- "fontspec loads the fonts" --> PDF["cv.pdf<br/>cover-letter.pdf"]
+    PDF --> ATS["Recruitment system<br/>extracts the plain text"]
+    PDF --> READER["Recruiter<br/>reads the page"]
+    CI["Build workflow<br/>compiles both on every pull request<br/>and checks the letter is one page"] -. "same engine" .-> ENGINE
+```
 
 > [!IMPORTANT]
 > pdfLaTeX will not compile these files. If Overleaf shows a `fontspec` error, the compiler is still set to pdfLaTeX.
